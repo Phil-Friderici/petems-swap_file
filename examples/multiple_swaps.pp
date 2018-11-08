@@ -1,10 +1,10 @@
 node default {
   class { 'swap_file':
     files => {
-      'swapfile' => {
-        ensure => 'present',
+      'swapfile'         => {
+        ensure   => 'present',
       },
-      'use fallocate' => {
+      'use fallocate'    => {
         swapfile => '/tmp/swapfile.fallocate',
         cmd      => 'fallocate',
       },
